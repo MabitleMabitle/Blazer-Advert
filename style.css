@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+html {
+  /* making 1rem = 10px */
+  font-size: 62.5%;
+}
+
+.container {
+  inline-size: 100%;
+  block-size: 100vh;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.2)
+    ),
+    url(images/pexels-marta-wave-5876565.jpg) center no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  inline-size: 100rem;
+  block-size: 65rem;
+  box-shadow: 0 1rem 6rem rgba(0, 0, 0, 0.5);
+  display: flex;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.card-left {
+  inline-size: 65%;
+  block-size: 100%;
+  background-color: rgba(123, 120, 106, 0.5);
+  border-start-start-radius: 1rem;
+  border-end-start-radius: 1rem;
+  position: relative;
+  backdrop-filter: blur(0.5rem);
+  z-index: 100;
+}
+
+.card-left h3 {
+  position: absolute;
+  inset-block-start: 15%;
+  inset-inline-start: 10%;
+  font-family: "Tilt Warp", cursive;
+  font-size: 3rem;
+  letter-spacing: 0.2rem;
+  color: #312e27;
+}
+.card-left h1 {
+  position: absolute;
+  inset-block-start: 22%;
+  inset-inline-start: 10%;
+  inline-size: 30rem;
+  font-family: "Tilt Warp", cursive;
+  font-size: 4.5rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  line-height: 1;
+  color: #e9bd7c;
+}
+
+.card-left-image {
+  inline-size: 35rem;
+  position: absolute;
+  inset-block-start: 12%;
+  inset-inline-end: -8%;
+  transition: top 0.4s;
+}
+
+.card-left-image:hover {
+  inset-block-start: 8%;
+}
+
+.card-left-image::after {
+  content: "";
+  position: absolute;
+  inset-block-end: -7rem;
+  inset-inline-start: 50%;
+  transform: translateX(-50%);
+  inline-size: 30rem;
+  block-size: 10rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10rem;
+  filter: blur(3.5rem);
+  transition: all 0.4s;
+}
+
+.card-left-image:hover::after {
+  inset-block-end: -10rem;
+  filter: blur(5rem);
+}
+
+.card-left-image img {
+  inline-size: 100%;
+}
+
+.card-right {
+  inline-size: 35%;
+  height: 100%;
+  background-color: rgba(93, 86, 66, 0.6);
+  border-start-end-radius: 1rem;
+  border-end-end-radius: 1rem;
+  backdrop-filter: blur(0.5rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-information {
+  inline-size: 24rem;
+}
+
+.product-information p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.colors {
+  display: flex;
+  margin-block-start: 2rem;
+  margin-block-end: 4rem;
+}
+.colors span {
+  inline-size: 6rem;
+  block-size: 0.5rem;
+}
+
+.colors span:nth-child(1) {
+  background-color: #ecddc7;
+}
+.colors span:nth-child(2) {
+  background-color: #9a8b6a;
+}
+.colors span:nth-child(3) {
+  background-color: #5d5542;
+}
+.colors span:nth-child(4) {
+  background-color: #383123;
+}
+
+.sizes {
+  margin-block-start: 2rem;
+  margin-block-end: 4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sizes strong {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #e9bd7c;
+  inline-size: 3rem;
+  block-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sizes strong:nth-child(3) {
+  border-radius: 50%;
+  border: 0.1rem solid #e9bd7c;
+}
+
+.sleeve,
+.chest {
+  inline-size: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.counter {
+  inline-size: 2rem;
+  block-size: 2rem;
+  border-radius: 50%;
+  border: 0.1rem solid #e9bd7c;
+  margin-block-start: 2rem;
+  margin-block-end: 4rem;
+  position: relative;
+}
+
+.sleeve-counter {
+  transform: translateX(16rem);
+}
+
+.chest-counter {
+  transform: translateX(5rem);
+}
+
+.sleeve-counter::before {
+  content: "";
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-end: 2rem;
+  transform: translateY(-50%);
+  inline-size: 16rem;
+  block-size: 0.1rem;
+  background-color: #e9bd7c;
+}
+.sleeve-counter::after {
+  content: "";
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-end: -6rem;
+  transform: translateY(-50%);
+  inline-size: 6rem;
+  block-size: 0.1rem;
+  background-color: #e9bd7c;
+}
+.chest-counter::before {
+  content: "";
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-end: 2rem;
+  transform: translateY(-50%);
+  inline-size: 5rem;
+  block-size: 0.1rem;
+  background-color: #e9bd7c;
+}
+.chest-counter::after {
+  content: "";
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-end: -17rem;
+  transform: translateY(-50%);
+  inline-size: 17rem;
+  block-size: 0.1rem;
+  background-color: #e9bd7c;
+}
+
+.card-button {
+  inline-size: 12rem;
+  block-size: 5rem;
+  background-color: #e9bd7c;
+  display: block;
+  margin: auto;
+  border-radius: 5rem;
+  border: none;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.card-button:active {
+  transform: translateY(-0.2rem);
+}
